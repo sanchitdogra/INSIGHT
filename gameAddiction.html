@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="Logo.png">
+
+<title>INSIGHT-Gaming Addiction</title>
+  
+<script lang="javaScript">
+  var game=0;
+  console.log("Score: "+game);
+</script>
+  
+  
+<style>
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+/* Defaults */
+html, body, #quizzie {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:url(back2.jpeg)
+  }
+
+h1 {
+  font-family: 'Satisfy', 'cursive';
+  font-size: 2.5em;
+}
+
+h2, p {
+  font-family: 'Pathway Gothic One', 'sans-serif';
+  font-size: 2em;
+}
+
+h1, h2, p {
+  text-align: center;
+  display: block;
+  width: auto;
+  margin: 1%;
+}
+
+#quizzie {
+  padding: 5% 0;
+  /* Individual Steps/Sections */
+  /* Content */
+}
+#quizzie ul {
+  list-style: none;
+  display: block;
+  width: auto;
+  margin: 2% 2%;
+  padding: 2%;
+  overflow: auto;
+  display: none;
+  /* Step Questions and Answer Options */
+}
+#quizzie ul.current {
+  display: block;
+}
+#quizzie ul li {
+  display: inline-block;
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  overflow: auto;
+  text-align: center;
+}
+#quizzie ul li.quiz-answer {
+  cursor: pointer;
+}
+#quizzie ul li.question, #quizzie ul li.results-inner {
+  display: block;
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2%;
+}
+#quizzie ul li.results-inner {
+  padding: 5% 2%;
+}
+#quizzie ul li.results-inner img {
+  width: 250px;
+}
+#quizzie ul li:last-child {
+  margin-right: 0;
+}
+#quizzie .question-wrap, #quizzie .answer-wrap {
+  display: block;
+  padding: 1%;
+  margin: 1em 10%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#quizzie .answer-wrap {
+  background: rgb(0, 0, 0);
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+#quizzie .answer-wrap:hover {
+  background: rgb(56, 5, 49);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div id="quizzie">
+  <u><h1>Gaming Addiction</h1></u>
+    <ul class="quiz-step step1 current">
+        <li class="question">
+            <div class="question-wrap">
+                <b><p>Question 1: Do you spend a lot of time thinking about games even when you're not playing, or planning when you can play next?</p></b>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+          <div class="answer-wrap"> 
+            <script lang="javaScript">
+              function increase ()
+              {
+                game = game+1;
+                console.log("Score: "+game);
+              }
+            </script>
+            <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+        </div>
+      </li>
+      <li class="quiz-answer high-value" data-quizIndex="4">
+        <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text">No</p></font>
+        </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step2">
+        <li class="question">
+            <div class="question-wrap">
+                <b><p>Question 2: Do you feel restless, irritable, moody, angry, anxious, bored, or sad when you try to cut down or stop gaming, or when you are unable to play?</p></b>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+          <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+        </div>
+      </li>
+      <li class="quiz-answer high-value" data-quizIndex="4">
+        <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text">No</p></font>
+        </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step3">
+        <li class="question">
+            <div class="question-wrap">
+                <b><p>Question 3: And do you feel the need to play for increasing amounts of time, play more exciting games, use more powerful equipment to get the same amount of excitement you used to get?</p></b>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+          <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+        </div>
+      </li>
+      <li class="quiz-answer high-value" data-quizIndex="4">
+        <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text">No</p></font>
+        </div>
+        </li>
+    </ul>
+    <ul class="quiz-step step4">
+        <li class="question">
+            <div class="question-wrap">
+                <b><p>Question 4: Have you felt you should play less, but are unable to cut back on the amount of time you spend playing games?</p></b>
+            </div>
+        </li>
+        <li class="quiz-answer low-value" data-quizIndex="2">
+          <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+        </div>
+      </li>
+      <li class="quiz-answer high-value" data-quizIndex="4">
+        <div class="answer-wrap"> 
+            <font color="white"><p class="answer-text">No</p></font>
+        </div>
+        </li>
+     </ul>
+     <ul class="quiz-step step5">
+      <li class="question">
+          <div class="question-wrap">
+              <b><p>Question 5: Have you lost interest—or reduced participation in other recreational activities due to gaming?</p></b>
+          </div>
+      </li>
+      <li class="quiz-answer low-value" data-quizIndex="2">
+        <div class="answer-wrap"> 
+          <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+      </div>
+    </li>
+    <li class="quiz-answer high-value" data-quizIndex="4">
+      <div class="answer-wrap"> 
+          <font color="white"><p class="answer-text">No</p></font>
+      </div>
+      </li>
+   </ul>
+   <ul class="quiz-step step5">
+    <li class="question">
+        <div class="question-wrap">
+            <b><p>Question 6: Have you continued to play a game even though you knew about the negative consequences, such as not getting enoug sleep, being late to school/work, spending too much money, having arguments with others, or neglecting important duties?</p></b>
+        </div>
+    </li>
+    <li class="quiz-answer low-value" data-quizIndex="2">
+      <div class="answer-wrap"> 
+        <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+    </div>
+  </li>
+  <li class="quiz-answer high-value" data-quizIndex="4">
+    <div class="answer-wrap"> 
+        <font color="white"><p class="answer-text">No</p></font>
+    </div>
+    </li>
+ </ul>
+ <ul class="quiz-step step5">
+  <li class="question">
+      <div class="question-wrap">
+          <b><p>Question 7: Have you been deceptive, or lied to family, friends, or others about how much you game? </p></b>
+      </div>
+  </li>
+  <li class="quiz-answer low-value" data-quizIndex="2">
+    <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+  </div>
+</li>
+<li class="quiz-answer high-value" data-quizIndex="4">
+  <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text">No</p></font>
+  </div>
+  </li>
+</ul>
+<ul class="quiz-step step5">
+  <li class="question">
+      <div class="question-wrap">
+          <b><p>Question 8: Do you game to escape from or forget about personal problems, or to relieve
+            uncomfortable feelings such as guilt, anxiety, helplessness, or depression?
+            </p></b>
+      </div>
+  </li>
+  <li class="quiz-answer low-value" data-quizIndex="2">
+    <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+  </div>
+</li>
+<li class="quiz-answer high-value" data-quizIndex="4">
+  <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text">No</p></font>
+  </div>
+  </li>
+</ul>
+<ul class="quiz-step step5">
+  <li class="question">
+      <div class="question-wrap">
+          <b><p>Question 9: Have you risked or lost significant relationship, job, educational, or career opportunities because of gaming?</p></b>
+      </div>
+  </li>
+  <li class="quiz-answer low-value" data-quizIndex="2">
+    <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+  </div>
+</li>
+<li class="quiz-answer high-value" data-quizIndex="4">
+  <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text">No</p></font>
+  </div>
+  </li>
+</ul>
+<ul class="quiz-step step5">
+  <li class="question">
+      <div class="question-wrap">
+          <b><p>Question 10: Do you find yourself spendending much more time playing than you used to, playing video games?</p></b>
+      </div>
+  </li>
+  <li class="quiz-answer low-value" data-quizIndex="2">
+    <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text" onclick="increase()" value="display">Yes</p></font>
+  </div>
+</li>
+<li class="quiz-answer high-value" data-quizIndex="4">
+  <div class="answer-wrap"> 
+      <font color="white"><p class="answer-text">No</p></font>
+  </div>
+  </li>
+</ul>
+<ul class="quiz-step step5">
+  <li class="question">
+    <div class="question-wrap">
+      <b>
+        <p>Your responses have been submitted successfully.</p>
+      </b>
+    </div>
+  </li>
+  <li class="quiz-answer low-value" data-quizIndex="2">
+    <div class="answer-wrap3">
+      <p class="float-right">
+      <u><p class="answer-text" onclick="calculate()" value="display">Curious to Know Your Result?</p></u>
+      </p>
+    </div>
+  </li>
+
+</ul>
+<ul class="quiz-step step5">
+  <li class="question">
+    <div class="question-wrap" id="res_btn">
+      <script lang="javaScript">
+        function calculate() {
+          if (game === 0) {
+            console.log("Level: None");
+            document.getElementById("res_btn").innerHTML += '<a href="nogame.html" class="btn btn-dark">Click to View Your Result</a>';
+          }
+          if (game > 0 && game <= 3) {
+            console.log("Level: Low");
+            document.getElementById("res_btn").innerHTML += '<a href="lowgame.html" class="btn btn-dark">Click to View Your Result</a>';
+          }
+          if (game > 3 && game < 5 || game === 5) {
+            console.log("Level: Moderate");
+            document.getElementById("res_btn").innerHTML += '<a href="moderateepression.html" class="btn btn-dark">Click to View Your Result</a>';
+          }
+          if (game > 5 && game < 8 || game === 8) {
+            console.log("Level: High");
+            document.getElementById("res_btn").innerHTML += '<a href="severegame.html" class="btn btn-dark">Click to View Your Result</a>';
+          }
+          if (game > 8 && game < 10 || game === 10) {
+            console.log("Level: Extreme");
+            document.getElementById("res_btn").innerHTML += '<a href="severegame.html" class="btn btn-dark">Click to View Your Result</a>';
+          }
+        }
+      </script>
+    </div>
+  </li>
+</ul>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script id="rendered-js" >
+// Quiz result options in a separate object for flexibility
+var resultOptions = [
+{ title: 'You Are This Thing',
+  desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/tXTjD9k.jpg"/>' },
+{ title: 'You Are That Thing',
+  desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/dipkE0v.jpg"/>' },
+{ title: 'You Are This Other Thing',
+  desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/WXox0Yv.jpg"/>' },
+{ title: 'You Are This One Thing',
+  desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/NH5cunw.png"/>' },
+{ title: 'You Are A Type Of Thing',
+  desc: '<p>Here, have an Archer</p><img src="https://i.imgur.com/NH5cunw.png"/>' }];
+
+
+// global variables
+var quizSteps = $('#quizzie .quiz-step'),
+totalScore = 0;
+
+// for each step in the quiz, add the selected answer value to the total score
+// if an answer has already been selected, subtract the previous value and update total score with the new selected answer value
+// toggle a visual active state to show which option has been selected
+quizSteps.each(function () {
+  var currentStep = $(this),
+  ansOpts = currentStep.children('.quiz-answer');
+  // for each option per step, add a click listener
+  // apply active class and calculate the total score
+  ansOpts.each(function () {
+    var eachOpt = $(this);
+    eachOpt[0].addEventListener('click', check, false);
+    function check() {
+      var $this = $(this),
+      value = $this.attr('data-quizIndex'),
+      answerScore = parseInt(value);
+      // check to see if an answer was previously selected
+      if (currentStep.children('.active').length > 0) {
+        var wasActive = currentStep.children('.active'),
+        oldScoreValue = wasActive.attr('data-quizIndex'),
+        oldScore = parseInt(oldScoreValue);
+        // handle visual active state
+        currentStep.children('.active').removeClass('active');
+        $this.addClass('active');
+        // handle the score calculation
+        totalScore -= oldScoreValue;
+        totalScore += answerScore;
+        calcResults(totalScore);
+      } else {
+        // handle visual active state
+        $this.addClass('active');
+        // handle score calculation
+        totalScore += answerScore;
+        calcResults(totalScore);
+        // handle current step
+        updateStep(currentStep);
+      }
+    }
+  });
+});
+
+// show current step/hide other steps
+function updateStep(currentStep) {
+  if (currentStep.hasClass('current')) {
+    currentStep.removeClass('current');
+    currentStep.next().addClass('current');
+  }
+}
+
+// display scoring results
+function calcResults(totalScore) {
+  // only update the results div if all questions have been answered
+  if (quizSteps.find('.active').length == quizSteps.length) {
+    var resultsTitle = $('#results h1'),
+    resultsDesc = $('#results .desc');
+
+    // calc lowest possible score
+    // var lowestScoreArray = $('#quizzie .low-value').map(function () {
+    //   return $(this).attr('data-quizIndex');
+    // });
+    var minScore = 0;
+    for (var i = 0; i < lowestScoreArray.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+      minScore += lowestScoreArray[i] << 0;
+    }
+    // calculate highest possible score
+    // window.CP.exitedLoop(0);var highestScoreArray = $('#quizzie .high-value').map(function () {
+    //   return $(this).attr('data-quizIndex');
+    // });
+    // var maxScore = 0;
+    // for (var i = 0; i < highestScoreArray.length; i++) {if (window.CP.shouldStopExecution(1)) break;
+    //   maxScore += highestScoreArray[i] << 0;
+    // }
+    // calc range, number of possible results, and intervals between results
+    // window.CP.exitedLoop(1);var range = maxScore - minScore,
+    // numResults = resultOptions.length,
+    // interval = range / (numResults - 1),
+    // increment = '',
+    n = 0; //increment index
+    // incrementally increase the possible score, starting at the minScore, until totalScore falls into range. then match that increment index (number of times it took to get totalScore into range) and return the corresponding index results from resultOptions object
+    while (n < numResults) {if (window.CP.shouldStopExecution(2)) break;
+      increment = minScore + interval * n;
+      if (totalScore <= increment) {
+        // populate results
+        resultsTitle.replaceWith("<h1>" + resultOptions[n].title + "</h1>");
+        resultsDesc.replaceWith("<p class='desc'>" + resultOptions[n].desc + "</p>");
+        return;
+      } else {
+        n++;
+      }
+    }window.CP.exitedLoop(2);
+  }
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
