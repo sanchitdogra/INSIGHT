@@ -1,0 +1,12 @@
+1. Feedback from Suruchi Dogra to be corrected.-To be Done
+2. https://sanchitdogra.github.io/SVC-Test/web.html# - Here instead of "Check out our reviews" PUT " Back to Homepage" button-no
+3. On the result page, "Check out our reviews" - button to be aligned to right bottom corner-not possible
+4. Moderate depression functionality is not working - seems the file name is incorrect - see the spelling of depression  below
+	https://sanchitdogra.github.io/SVC-Test/moderateepression.html
+5. Incorrect spelling in the below question from Gaming quiz:
+
+Question 10: Do you find yourself spendending much more time playing than you used to, playing video games?
+
+6. Button correct - Curious to know your results
+7. Button correct - Click to check out your results
+8. Keep differnt pic in the result page of the 4 quizzes-to be done
