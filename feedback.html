@@ -1,588 +1,379 @@
-
-
-<!DOCTYPE html>
-<html lang="en" >
+<!doctype html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="Logo.png">
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="Logo.png">
+  <title>INSIGHT - Feedback</title>
 
-  <title>INSIGHT-Feedback</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-  
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-img {
-	max-width: 100%;
-}
-
-body {
-	font-family: 'Roboto Slab', serif;
-	font-size: 15px;
-	line-height: 1.67;
-	color: #444;
-	padding: 60px 0;
-}
-
-.section-title {
-	font-size: 28px;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	font-weight: 400;
-	display: inline-block;
-	position: relative;
-}
-.section-title:after,
-.section-title:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-}
-.section-title:after {
-	height: 2px;
-	background-color: rgba(252, 92, 15, 0.46);
-	left: 25%;
-	right: 25%;
-}
-
-.section-title:before {
-	width: 15px;
-	height: 15px;
-	border: 3px solid #fff;
-	background-color: #fc5c0f;
-	left: 50%;
-	transform: translatex(-50%);
-	bottom: -6px;
-	z-index: 9;
-	border-radius: 50%;
-}
-
-/* CAROUSEL STARTS */
-.customer-feedback .owl-item img {
-	width: 85px;
-	height: 85px;
-}
-
-.feedback-slider-item {
-	position: relative;
-	padding: 60px;
-	margin-top: -40px;
-}
-
-.customer-name {
-	margin-top: 15px;
-	margin-bottom: 25px;
-	font-size: 20px;
-	font-weight: 500;
-}
-
-.feedback-slider-item p {
-	line-height: 1.875;
-}
-
-.customer-rating {
-	background-color: #eee;
-	border: 3px solid #fff;
-	color: rgba(1, 1, 1, 0.702);
-	font-weight: 700;
-	border-radius: 50%;
-	position: absolute;
-	width: 47px;
-	height: 47px;
-	line-height: 44px;
-	font-size: 15px;
-	right: 0;
-	top: 77px;
-	text-indent: -3px;
-}
-
-.thumb-prev .customer-rating {
-	top: -20px;
-	left: 0;
-	right: auto;
-}
-
-.thumb-next .customer-rating {
-	top: -20px;
-	right: 0;
-}
-
-.customer-rating i {
-	color: rgb(251, 90, 13);
-	position: absolute;
-	top: 10px;
-	right: 5px;
-	font-weight: 600;
-	font-size: 12px;
-}
-
-/* GREY BACKGROUND COLOR OF THE ACTIVE SLIDER */
-.feedback-slider-item:after {
-	content: '';
-	position: absolute;
-	left: 20px;
-	right: 20px;
-	bottom: 0;
-	top: 103px;
-	background-color: #f6f6f6;
-	border: 1px solid rgba(251, 90, 13, .1);
-	border-radius: 10px;
-	z-index: -1;
-}
-
-.thumb-prev,
-.thumb-next {
-	position: absolute;
-	z-index: 99;
-	top: 45%;
-	width: 98px;
-	height: 98px;
-	left: -90px;
-	cursor: pointer;
-	transition: all .3s;
-}
-
-.thumb-next {
-	left: auto;
-	right: -90px;
-}
-
-.feedback-slider-thumb img {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.feedback-slider-thumb:hover {
-	opacity: .8;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-}
-
-.customer-feedback .owl-nav [class*="owl-"] {
-	position: relative;
-	display: inline-block;
-	bottom: 45px;
-	transition: all .2s ease-in;
-}
-
-.customer-feedback .owl-nav i {
-	background-color: transparent;
-	color: rgb(251, 90, 13);
-	font-size: 25px;
-}
-
-.customer-feedback .owl-prev {
-	left: -15px;
-}
-
-.customer-feedback .owl-prev:hover {
-	left: -20px;
-}
-
-.customer-feedback .owl-next {
-	right: -15px;
-}
-
-.customer-feedback .owl-next:hover {
-	right: -20px;
-}
-
-/* DOTS */
-.customer-feedback .owl-dots {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 35px;
-}
-.customer-feedback .owl-dot {
-	display: inline-block;
-}
-
-.customer-feedback .owl-dots .owl-dot span {
-	width: 11px;
-	height: 11px;
-	margin: 0 5px;
-	background: #fff;
-	border: 1px solid rgb(251, 90, 13);
-	display: block;
-	-webkit-backface-visibility: visible;
-	transition: all 200ms ease;
-	border-radius: 50%;
-}
-
-.customer-feedback .owl-dots .owl-dot.active span {
-	background-color: rgb(251, 90, 13);
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 767px) {
-	.feedback-slider-item:after {
-		left: 30px;
-		right: 30px;
-	}
-	.customer-feedback .owl-nav [class*="owl-"] {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		margin-top: 45px;
-		bottom: auto;
-	}
-	.customer-feedback .owl-prev {
-		left: 0;
-	}
-	.customer-feedback .owl-next {
-		right: 0;
-	}
-	
-}
-
-/* extra */
-.copyright {
-	text-align: center;
-	margin-top: 30px;
-	font-size: 1.6rem;
-	background-color: #eee;
-}
-.copyright a {
-	display: inline-block;
-	padding: 10px 2px;
-}
-.upwork {
-	color: #37a000;
-}
-.upwork:after {
-	content: '/';
-	margin-left: 10px;
-}
-.fiverr {
-	color: #1dbf73;
-}
-.copyright .triplebyte {
-	display: block;
-	padding-top: 0;
-	color: #344759;
-	text-decoration: underline;
-}
-</style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-
-
+  <link href="album.css" rel="stylesheet">
 </head>
 
-<body translate="no" >
-  <section>
-	<div class="customer-feedback">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-sm-offset-2 col-sm-8">
-					<div>
-						<h2 class="section-title">What Users Say</h2>
-					</div>
-				</div><!-- /End col -->
-			</div><!-- /End row -->
+<body>
+    
+    <br><br>
 
-			<div class="row">
-				<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-					<div class="owl-carousel feedback-slider">
+    <U><center><h2>FEEDBACKS</h2></center></U>
 
-						<!-- slider item -->
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Suruchi Dogra</h3>
-							<p>
-							</h3>
-							In the current situation where so many people are working from home, sometimes for long working hours, more often we are getting to hear on people getting frustrated, feeling depressed and not knowing what to do. Sometimes they feel the change in their behaviour but fail to understand the underlying reason behind it. INSIGHT provides self help in a very easy manner.
-							</p>
-							<!-- <span class="light-bg customer-rating" data-rating="5">
-								5
-								<i class="fa fa-star"></i>
-							</span> -->
-						</div>
-						<!-- /slider item -->
+    <br>
+    <div class="album py-5 bg-light">
+      <div class="container">
 
-						<!-- slider item -->
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Yatin Sheth</h3>
-							<p>INSIGHT has come out well. In the given situation what INSIGHT gives is important.</p>
-							<!-- <span class="light-bg customer-rating" data-rating="4">
-								4
-								<i class="fa fa-star"></i>
-							</span> -->
-						</div>
-						<!-- /slider item -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <center><h3><br>Suruchi Dogra</h3></center>
+              <div class="card-body">
+                <p class="card-text">In the current situation where so many people are working from home, sometimes for long working hours, more often we are getting to hear on people getting frustrated, feeling depressed and not knowing what to do. Sometimes they feel the change in their behaviour but fail to understand the underlying reason behind it. INSIGHT provides self help in a very easy manner.<br><br></p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <center><h3><br>Yatin Sheth</h3></center>
+              <div class="card-body">
+                <p class="card-text">INSIGHT has come out well. In the given situation what INSIGHT gives is important.<br><br><br><br><br><br><br><br></p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <center><h3><br>Vikas Surana</h3></center>
+              <div class="card-body">
+                <p class="card-text">It is indeed a useful test to retrospect oneself and lead a hassle free life. We all know causes of depression, stress , anxiety but to face it and come out of it is technique which is well elaborated in this test and review. Thought process and execution of Sanchit is awesome and I wish him all the very best to grow with his thoughts.<br><br><br></p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-						<!-- slider item -->
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Vikas Surana</h3>
-							<p>It is indeed a useful test to retrospect oneself and lead a hassle free life. We all know causes of depression, stress , anxiety but to face it and come out of it is technique which is well elaborated in this test and review. Thought process and execution of Sanchit is awesome and I wish him all the very best to grow with his thoughts.</p>
-						</div>
+    
+<div class="album py-5 bg-light">
+  <div class="container">
 
-						<!-- slider item -->
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Neel</h3>
-							<p>The website is quite informative, creative and most importantly user friendly.</p>
-						</div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <center><h3><br>Neel</h3></center>
+          <div class="card-body">
+            <p class="card-text">The website is quite informative, creative and most importantly user friendly.<br><br><br><br><br><br><br></p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+        <center><h3><br>Viren Gharat</h3></center>
+        <div class="card-body">
+          <p class="card-text">Too good. The modules give helpful results.<br><br><br><br><br><br><br><br></p>
+          <div class="d-flex justify-content-between align-items-center">
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <center><h3><br>Taranjit Gill</h3></center>
+        <div class="card-body">
+          <p class="card-text">INSIGHT is good creative way to help one realize their own situation, feelings and emotions.<br><br><br><br><br><br><br></p>
+          <div class="d-flex justify-content-between align-items-center">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+        
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Viren Gharat</h3>
-							<p>Too good. The modules give helpful results.</p>
-						</div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Khushi Patel</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">INSIGHT is a very helpful platform. It provides solutions to tackle some of the major problems dealt by people these days. We observe that everyday the number of people dealing with depression , anxiety and several other mental disorders is increasing. This is partly because people don't know how to approach for help in such situations (Or they simply don't know the solutions to these problems) INSIGHT provides a few ways to cope with such disorders.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Suhas kolekar</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Went through to all tests....In anxiety results, whatever it has suggested to do ...I had just started the same ...Meditation.....just only few days back......results gave me moral support for me that I am on right track.......Thanks to INSIGHT created by Sanchit Dogra......congratulations dear......keep it up.......<br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Sharad Dogra</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Very informative and helpful. Keep up the good work Sanchit. God Bless You & Best Wishes.<br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Taranjit Gill</h3>
-							<p>INSIGHT is good creative way to help one realize their own situation, feelings and emotions.</p>
-						</div>
+        
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Khushi Patel</h3>
-							<p>INSIGHT is a very helpful platform. It provides solutions to tackle some of the major problems dealt by people these days. We observe that everyday the number of people dealing with depression , anxiety and several other mental disorders is increasing. This is partly because people don't know how to approach for help in such situations (Or they simply don't know the solutions to these problems) INSIGHT provides a few ways to cope with such disorders.</p>
-						</div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Janeel Patel</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Yes, the website was very insightful and helped me a lot.<br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Fatema</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">This website is a great platform for individuals to figure out their issues at ease and has definitely helped me for the better!<br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Aditya Lunawat</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">It's just amazing! 👏<br><br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Janeel Patel</h3>
-							<p>Yes, the website was very insightful and helped me a lot.</p>
-						</div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Kanak Daryani</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">INSIGHT is very user friendly and informative. It helps to understand our mental state which many times is ignored and also provides solution.<br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Suhani</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">INSIGHT is a wonderful platform by which people can identify their issues and find ways to deal with the same!<br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Kanishk</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Very interesting and informative 👍<br><br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Fatema</h3>
-							<p>This website is a great platform for individuals to figure out their issues at ease and has definitely helped me for the better!</p>
-						</div>
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Dipansh tandon</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">A great website to identify our problems and how to deal with the same.<br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Piyush Kapoor</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Hi Sanchit,You are a star. Many of us don't even think about these mental factors. This site will help people to examine themselves and immediately an appropriate action can be taken.I'm sure you will excel in this field. Best of luck 👍. Regards,Piyush Kapoor<br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Simar Wahan</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">INSIGHT is a platform that spreads awareness and helps one to understand their mental health. It's very user friendly and at difficult times like these INSIGHT is something we all need for us to be aware of what we are going through mentally and how to tackle those issues.<br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>         
 
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Aditya Lunawat</h3>
-							<p>It's just amazing! 👏</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Kanak Daryani</h3>
-							<p>INSIGHT is very user friendly and informative. It helps to understand our mental state which many times is ignored and also provides solution.</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Suhani</h3>
-							<p>INSIGHT is a wonderful platform by which people can identify their issues and find ways to deal with the same!</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Kanishk</h3>
-							<p>Very interesting and informative 👍</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Dipansh tandon</h3>
-							<p>A great website to identify our problems and how to deal with the same.</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Piyush Kapoor</h3>
-							<p>Hi Sanchit,You are a star. Many of us don't even think about these mental factors. This site will help people to examine themselves and immediately an appropriate action can be taken.I'm sure you will excel in this field. Best of luck 👍. Regards,Piyush Kapoor</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Simar Wahan</h3>
-							<p>INSIGHT is a platform that spreads awareness and helps one to understand their mental health. It's very user friendly and at difficult times like these INSIGHT is something we all need for us to be aware of what we are going through mentally and how to tackle those issues.</p>
-						</div>
-						
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Nainish Prakash Gujrathi</h3>
-							<p>Brilliant work that too at such a tender age...Genius in making...all the best Sanchit.</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Prasad Dixit</h3>
-							<p>Very well structured and nicely designed site with useful information.</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Rajan Shandilya</h3>
-							<p>The information available at this site is useful to understand what is stress and how to deal with it. I tried the quiz to check my mental status and the result is helpful. It is easy to navigate the site information. Well done Sanchit!</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Suhas kolekar</h3>
-							<p>Went through to all tests....In anxiety results, whatever it has suggested to do ...I had just started the same ...Meditation.....just only few days back......results gave me moral support for me that I am on right track.......Thanks to INSIGHT created by Sanchit Dogra......congratulations dear......keep it up.......</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Sharad Dogra</h3>
-							<p>Very informative and helpful. Keep up the good work Sanchit. God Bless You & Best Wishes.</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Rajiv Menon</h3>
-							<p>Kudos to Sanchit for setting it up. The platform is very insightful, informative, introspective, relevant and user friendly. Hope it helps users to achieve a more balanced mind, driving towards right behaviour and a better tomorrow. Thank you and good luck!</p>
-						</div>
-
-						<div class="feedback-slider-item">
-							<img src="lol.svg" class="center-block img-circle" alt="Customer Feedback">
-							<h3 class="customer-name">Hiren</h3>
-							<p>Very Noble attempt and apt for these times. Website has motivational and inspirational words, it's nice and calming!!</p>
-						</div>
-						
-					</div>
-					<!-- <div class="feedback-slider-thumb hidden-xs">
-						<div class="thumb-prev">
-							<span>
-								<img src="lol.svg" alt="Customer Feedback">
-							</span>
-						</div>
-
-						<div class="thumb-next">
-							<span>
-								<img src="lol.svg" alt="Customer Feedback">
-							</span>
-						</div>
-					</div> -->
-					<!-- /side thumbnail -->
-
-				</div><!-- /End col -->
-			</div><!-- /End row -->
-		</div><!-- /End container -->
-	</div><!-- /End customer-feedback -->
-</section>
-
-<!-- extra -->
-<div class="copyright">
-	<p>
-		<a href="contactForm.html" class="btn btn-primary" type="button" target="_blank">Add feedback</a>
-		<a href="index.html" class="btn btn-primary" type="button" target="_blank">Back To homepage</a>
-	</p>
-</div>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-      <script id="rendered-js" >
-jQuery(document).ready(function ($) {
-
-  var feedbackSlider = $('.feedback-slider');
-  feedbackSlider.owlCarousel({
-    items: 1,
-    nav: true,
-    dots: true,
-    autoplay: true,
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    navText: ["<i class='fa fa-long-arrow-left'></i>", "<i class='fa fa-long-arrow-right'></i>"],
-    responsive: {
-
-      // breakpoint from 767 up
-      767: {
-        nav: true,
-        dots: false } } });
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Nainish Prakash Gujrathi</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Brilliant work that too at such a tender age...Genius in making...all the best Sanchit.<br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Prasad Dixit</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Very well structured and nicely designed site with useful information.<br><br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Rajan Shandilya</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">The information available at this site is useful to understand what is stress and how to deal with it. I tried the quiz to check my mental status and the result is helpful. It is easy to navigate the site information. Well done Sanchit!<br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
 
 
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Rajiv Menon</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Kudos to Sanchit for setting it up. The platform is very insightful, informative, introspective, relevant and user friendly. Hope it helps users to achieve a more balanced mind, driving towards right behaviour and a better tomorrow. Thank you and good luck!<br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Hiren</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Very Noble attempt and apt for these times. Website has motivational and inspirational words, it's nice and calming!!<br><br><br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Rajander Amarnath Razdan</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Hello Sanchit, seen you growing physically for almost 9-10 years now but I am surprised that you have grown beyond that. Very beautiful presentation & useful information for the depressed populace of our country and their caretakers. Caretakers are effected more by rendering service to such people. We have to look to them by humanitarian view and not by treatments only. Keep up the good work & be blessed.<br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+
+        <div class="album py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Max Dsouza</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">This is a great tool to judge oneself based on important mental factors that are often overlooked. The only way to properly address a problem is to identify and accept the fact that there is a problem in the first place and this is definitely helpful in that aspect.<br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-4 box-shadow">
+                  <center><h3><br>Ajay Dogra</h3></center>
+                  <div class="card-body">
+                    <p class="card-text">Even though mental disorder is an illness but unfortunately not seen as one in some societies. This page brings awareness of the issue and explain in simple terms, the various options available to treat it. Good going Sanchit.<br><br><br><br><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="index.html" type="button" class="btn btn-primary" >Back to Home Page</a>
+      </p>
+      <p class="float-left">
+        <a href="contactForm.html" type="button" class="btn btn-primary">Add Feedback</a>
+      </p>
+    </div>
+  </footer>
 
 
-  feedbackSlider.on("translate.owl.carousel", function () {
-    $(".feedback-slider-item h3").removeClass("animated fadeIn").css("opacity", "0");
-    $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating").removeClass("animated zoomIn").css("opacity", "0");
-  });
-
-  feedbackSlider.on("translated.owl.carousel", function () {
-    $(".feedback-slider-item h3").addClass("animated fadeIn").css("opacity", "1");
-    $(".feedback-slider-item img, .feedback-slider-thumb img, .customer-rating").addClass("animated zoomIn").css("opacity", "1");
-  });
-  feedbackSlider.on('changed.owl.carousel', function (property) {
-    var current = property.item.index;
-    var prevThumb = $(property.target).find(".owl-item").eq(current).prev().find("img").attr('src');
-    var nextThumb = $(property.target).find(".owl-item").eq(current).next().find("img").attr('src');
-    var prevRating = $(property.target).find(".owl-item").eq(current).prev().find('span').attr('data-rating');
-    var nextRating = $(property.target).find(".owl-item").eq(current).next().find('span').attr('data-rating');
-    $('.thumb-prev').find('img').attr('src', prevThumb);
-    $('.thumb-next').find('img').attr('src', nextThumb);
-    $('.thumb-prev').find('span').next().html(prevRating + '<i class="fa fa-star"></i>');
-    $('.thumb-next').find('span').next().html(nextRating + '<i class="fa fa-star"></i>');
-  });
-  $('.thumb-next').on('click', function () {
-    feedbackSlider.trigger('next.owl.carousel', [300]);
-    return false;
-  });
-  $('.thumb-prev').on('click', function () {
-    feedbackSlider.trigger('prev.owl.carousel', [300]);
-    return false;
-  });
-
-}); //end ready
-//# sourceURL=pen.js
-    </script>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyBsOHKoFC1JicwH3esVYsU0oQyFb4oh6to",
-    authDomain: "insight-1ac38.firebaseapp.com",
-    projectId: "insight-1ac38",
-    storageBucket: "insight-1ac38.appspot.com",
-    messagingSenderId: "622870987070",
-    appId: "1:622870987070:web:6c9f6f8cf7a0fd9dd5ec6f",
-    measurementId: "G-FL1WX63WV4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 
 </body>
 
 </html>
- 
