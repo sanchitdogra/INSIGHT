@@ -1,19 +1,16 @@
   // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyBsOHKoFC1JicwH3esVYsU0oQyFb4oh6to",
-    authDomain: "insight-1ac38.firebaseapp.com",
-    databaseURL: "https://insight-1ac38-default-rtdb.firebaseio.com",
-    projectId: "insight-1ac38",
-    storageBucket: "insight-1ac38.appspot.com",
-    messagingSenderId: "622870987070",
-    appId: "1:622870987070:web:6c9f6f8cf7a0fd9dd5ec6f",
-    measurementId: "G-FL1WX63WV4"
+    apiKey: "AIzaSyBDrifG3dWp6JD-S6U42UDxOxCoh-_00sM",
+    authDomain: "insight-c7f23.firebaseapp.com",
+    databaseURL: "https://insight-c7f23-default-rtdb.firebaseio.com",
+    projectId: "insight-c7f23",
+    storageBucket: "insight-c7f23.appspot.com",
+    messagingSenderId: "42626617168",
+    appId: "1:42626617168:web:45eff910ebfa84d279a655"
   };
-  
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
+
 
 // Listen for a submit
 document.querySelector(".contact-form").addEventListener("submit",submitForm);
